@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue双向绑定源码解析--悬笔e绝</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" id="a" v-model="text">
+        {{text}}
+    </div>
+    <script src="./src/Batcher.js"></script>
+    <script src="./src/Dep.js"></script>
+    <script src="./src/Observe.js"></script>
+    <script src="./src/Watcher.js"></script>
+    <script src="./src/Compile.js"></script>
+    <script src="./src/MVVM.js"></script>
+    <script>
+        var vm = new Vue({
+            el: 'app',
+            data: {
+                text: '悬笔e绝'
+            }
+        });
+    </script>
+</body>
+</html>
